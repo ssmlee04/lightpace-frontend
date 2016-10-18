@@ -30,7 +30,7 @@ class Navbar extends React.Component<void, Props, void> {
             <div className='navbar-header row' style={{ width: '100%' }}>
               <div className='col-md-3'>
                 <Link className='navbar-brand topnav quotefont' to='/' style={{ marginTop: '-5px' }}>
-                  Clearstreet
+                  Lightpace
                 </Link>
                 {user.isAdmin && <Link className='navbar-brand topnav quotefont' to='/zadmin' style={{ marginTop: '-5px' }}>
                   Panel

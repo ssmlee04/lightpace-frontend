@@ -63,7 +63,7 @@ class Landing extends React.Component<void, Props, void> {
   render() {
     const { src, ifSearch } = this.props;
     let {message1, message2} = this.props;
-    message1 = 'Clearstreet';
+    message1 = 'Lightpace';
     message2 = 'Find the things that matter around you';
     let style = {};
     if (src) {

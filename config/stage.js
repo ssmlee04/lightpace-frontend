@@ -2,9 +2,9 @@
 // Do not require this directly. Use ./src/config instead.
 
 export default {
-  apiRoot: 'https://apis.stage.clearstreet.io',
+  apiRoot: 'https://apis.stage.lightpace.com',
 
-  proxyRoot: 'https://stage.clearstreet.io',
+  proxyRoot: 'https://stage.lightpace.com',
 
   // 500px consumer key
   consumerKey: 'CLmpqnpwGLKetORtjc5gb9tC2hllfd6cqdfzHqFD',
