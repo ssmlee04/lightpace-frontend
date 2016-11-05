@@ -60,7 +60,7 @@ const APIUtils = {
     request
       // .withCredentials()
       .post(url)
-      .type("form")
+      // .type("form")
       // .set('Cookie', options && options.connectSid || '')
       // .set('accept-language', locale)
       .send(query)

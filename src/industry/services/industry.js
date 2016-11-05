@@ -6,7 +6,7 @@ module.exports = (() => {
   return {
     get: () => {
       console.log('doing get...')
-      return getP('/apis/v1/industry', {}, {})
+      return getP('/apis/v1/industries', {}, {})
     }
   }
 })()

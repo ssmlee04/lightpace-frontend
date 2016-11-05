@@ -39,7 +39,7 @@ const validateRegisterInputs = function (query) {
 // incorrectly thrown when using arrow functions, hence the oddity.
 export function fetchProfile (): Action {
   return (dispatch) => {
-    get('/apis/v1/loggedin', {}, {}, function (err, d) {
+    get('/apis/v1/auth/loggedin', {}, {}, function (err, d) {
       if (err) {
         return dispatch({
           type: SET_SYSTEM_POPUPS,
@@ -61,7 +61,7 @@ export function fetchProfile (): Action {
 
 export function logout (): Action {
   return (dispatch) => {
-    get('/apis/v1/logout', {}, {}, function (err, d) {
+    get('/apis/v1/auth/logout', {}, {}, function (err, d) {
       if (err) {
         return dispatch({
           type: SET_SYSTEM_POPUPS,
@@ -78,7 +78,7 @@ export function logout (): Action {
 
 export function login ({email, password}): Action {
   return (dispatch) => {
-    post('/apis/v1/login', {email, password}, {}, {}, function(err, d){
+    post('/apis/v1/auth/login', {email, password}, {}, {}, function(err, d){
       if (err) {
         return dispatch({
           type: SET_SYSTEM_POPUPS,
@@ -103,7 +103,7 @@ export function register ({email, password, sex, name, birthdate}): Action {
   }
 
   return (dispatch) => {
-    post('/apis/v1/register', {email, password, sex, name, birthdate}, {}, {}, function (err, d) {
+    post('/apis/v1/auth/register', {email, password, sex, name, birthdate}, {}, {}, function (err, d) {
       if (err) {
         return dispatch({
           type: SET_SYSTEM_POPUPS,

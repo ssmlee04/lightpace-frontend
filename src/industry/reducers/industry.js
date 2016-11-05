@@ -24,7 +24,7 @@ export function getIndustries (): Action {
 
 export function createIndustry ({name, description, ancestor, if_rank, if_show, time_multi, price_multi, ownstats}): Action {
   return (dispatch) => {
-    post('/apis/v1/industry', {name, description, ancestor, if_rank, if_show, time_multi, price_multi, ownstats}, {}, {}, function (err, d) {
+    post('/apis/v1/industries', {name, description, ancestor, if_rank, if_show, time_multi, price_multi, ownstats}, {}, {}, function (err, d) {
       if (err) {
         dispatch({
           type: SET_SYSTEM_POPUPS,
@@ -42,7 +42,7 @@ export function createIndustry ({name, description, ancestor, if_rank, if_show, 
 
 export function editIndustry (industryId, {name, description, ancestor, if_rank, if_show, time_multi, price_multi, ownstats}): Action {
   return (dispatch) => {
-    put(`/apis/v1/industry/${industryId}`, {name, description, ancestor, if_rank, if_show, time_multi, price_multi, ownstats}, {}, {}, function (err, d) {
+    put(`/apis/v1/industries/${industryId}`, {name, description, ancestor, if_rank, if_show, time_multi, price_multi, ownstats}, {}, {}, function (err, d) {
       if (err) {
         dispatch({
           type: SET_SYSTEM_POPUPS,
@@ -60,7 +60,7 @@ export function editIndustry (industryId, {name, description, ancestor, if_rank,
 
 export function getIndustry ({industryId}): Action {
   return (dispatch) => {
-    get(`/apis/v1/industry/${industryId}`, {}, {}, function (err, d) {
+    get(`/apis/v1/industries/${industryId}`, {}, {}, function (err, d) {
       if (err) {
         dispatch({
           type: SET_SYSTEM_POPUPS,

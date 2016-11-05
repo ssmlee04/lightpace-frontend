@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { resetPlacesSkip } from '../../places/reducers/places'
 import { setZone } from '../../system/reducers/system'
-import { getZones } from '../../zones/reducers/zone'
+import { getMarkets } from '../../zones/reducers/zone'
 
 type Props = {
   // user: Object,
@@ -12,7 +12,7 @@ type Props = {
 class SearchAreaZone extends React.Component<void, Props, void> {
   static propTypes = {
     setZone: PropTypes.func.isRequired,
-    getZones: PropTypes.func.isRequired,
+    getMarkets: PropTypes.func.isRequired,
     resetPlacesSkip: PropTypes.func.isRequired,
     zones: PropTypes.array,
     zid: PropTypes.string,
@@ -21,7 +21,7 @@ class SearchAreaZone extends React.Component<void, Props, void> {
   }
 
   componentDidMount () { 
-    this.props.getZones();
+    this.props.getMarkets();
   }
 
   onChange(e) {
@@ -61,5 +61,5 @@ const mapStateToProps = (state) => ({
   zones: state.zone.zones,
 })
 export default connect((mapStateToProps), {
-  setZone, getZones, resetPlacesSkip
+  setZone, getMarkets, resetPlacesSkip
 })(SearchAreaZone)

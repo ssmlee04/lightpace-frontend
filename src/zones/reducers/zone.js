@@ -7,9 +7,9 @@ export const GET_ZONES = 'GET_ZONES'
 import { get, post } from '../../../utils/APIUtils';
 import _ from 'lodash';
 
-export function getZones (): Action {
+export function getMarkets (): Action {
   return (dispatch) => {
-    get('/apis/v1/zone/locations', {lang: 'en'}, {}, (err, d) => {
+    get('/apis/v1/markets', {lang: 'en'}, {}, (err, d) => {
       if (err) {
         return
       }
@@ -22,7 +22,7 @@ export function getZones (): Action {
 }
 
 export const actions = {
-  getZones
+  getMarkets
 }
 
 // ------------------------------------

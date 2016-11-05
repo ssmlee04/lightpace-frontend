@@ -2,7 +2,7 @@
 // Do not require this directly. Use ./src/config instead.
 
 export default {
-  apiRoot: 'https://apis.lightpace.com',
+  apiRoot: 'https://lightpace.com',
 
   proxyRoot: 'https://lightpace.com',
 
